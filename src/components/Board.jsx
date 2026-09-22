@@ -41,6 +41,11 @@ const Board=()=> {
 
    }
 
+   const handleReset=()=>{
+    setSquares(Array(9).fill(null));
+    setX(true);
+   }
+
   return (
     <>
    
@@ -69,6 +74,12 @@ const Board=()=> {
       <Square value={squares[7]} onSquareClick={()=>handleClick(7)}/>
       <Square value={squares[8]} onSquareClick={()=>handleClick(8)}/>
     </div>
+    </div>
+
+    <div className='resetBtn'>
+      <button onClick={handleReset}>
+        Reset
+      </button>
     </div>
      </>
   )
